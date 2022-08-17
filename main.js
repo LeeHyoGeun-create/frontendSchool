@@ -22,6 +22,20 @@ async function getProductData() {
 
 getProductData().then((product) => {
   // console.log(product);
+  const header = document.createElement("header");
+  header.classList.add("header");
+  const headerNav = document.createElement("nav");
+  const headerList = document.createElement("ul");
+  headerList.classList.add("header-ul");
+  headerList.innerHTML = `
+    <li class="header-item">home</li>
+    <li class="header-item">about</li>
+    <li class="header-item">list</li>
+  `;
+  root.append(header);
+  header.append(headerNav);
+  headerNav.append(headerList);
+
   const mainElement = document.createElement("main");
   mainElement.classList.add("product");
   // console.log(mainElement);

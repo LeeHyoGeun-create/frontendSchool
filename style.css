@@ -20,6 +20,27 @@ a{
   color: black
 }
 
+header{
+  position: sticky;
+  top:0;
+  background-color: red;
+}
+
+.header-ul {
+  display: flex;
+  height: 50px;
+  border-bottom: 1px solid black;
+}
+
+.header-item{
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.header-item:hover{
+  text-decoration-line: underline ;
+}
+
 
 
 /* 두줄 말줄임 */
