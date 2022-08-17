@@ -78,9 +78,15 @@ button{
   justify-content: space-between;
 }
 
+.product-item:hover{
+  scale: 1.1;
+}
+
 .product-img{
   text-align: center;
 }
+
+
 
 .product-img img{
   width: 60%;
