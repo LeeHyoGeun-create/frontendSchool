@@ -3,6 +3,14 @@
 const root = document.querySelector(".root");
 
 async function getProductData() {
+  const product = await fetch("")
+    .then((response) => response.json())
+    .catch((e) => {
+      console.log(e);
+    });
+}
+
+async function getProductData() {
   const product = await fetch("http://test.api.weniv.co.kr/mall")
     .then((response) => response.json())
     .catch((e) => {
@@ -33,14 +41,21 @@ getProductData().then((product) => {
     productDetailLink.href = `/detail/${item.id}`;
     productDetailLink.innerHTML = `
       <li class='product-item'>
-        <div className="product-img">
+        <div class="product-img">
           <img src="http://test.api.weniv.co.kr/${item.thumbnailImg}">
         </div>
-        <strong class="product-name">${item.productName}</strong>
-        <button ><i class="fa-regular fa-thumbs-up"></i></button>  
-        <div className="product-price">
+        
+        <div class="title">
+          <button >
+          <strong class="product-name">${item.productName}</strong>
+            <i class="fa-regular fa-thumbs-up"></i>
+          </button>  
+          <div className="product-price">
+           
+          </div>
           <strong>${item.price}<span>원</span></strong>
         </div>
+        
       </li>
     `;
     productList.append(productDetailLink);

@@ -9,8 +9,18 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
 }
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: black
+}
+
+
 
 /* 두줄 말줄임 */
 .multi-ellipsis{
@@ -27,10 +37,28 @@ button{
   padding: 0;
 }
 
-/* link-button */
-.link-btn{
-  position: sticky;
-  top: 6rem;
-  width: 8rem;
-  height: 8rem;
+.ir{
+  text-align: center;
 }
+
+.product-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 50px;
+}
+
+.product-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-img{
+  text-align: center;
+}
+
+.product-img img{
+  width: 60%;
+}
+
